@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GraphQL Education Tracker</title>
+    <link rel="stylesheet" href="s.css">
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chartjs-adapter-date-fns"></script>
+</head>
+
+<body>
+    <div id="profile-box" class="container hidden">
+        
+        <button class="bubbly-button" onclick="logout()">Log Out</button>
+
+        <h2 id="welcome-msg"></h2>
+        <div id="info-container" class="charts-container">
+            <div id="user-info" class="card"></div> 
+        </div>
+        <br>
+        <div id="charts-container" class="charts-container">
+            <div class="chart-card">
+                <h3>XP Progress</h3>
+                <canvas id="xpBarChart"></canvas>
+            </div>
+        </div>
+        <br><br>
+        <div id="charts-container" class="charts-container">
+            <div class="chart-card">
+                <h3>Skills Progress</h3>
+                <canvas id="skillPieChart"></canvas>
+            </div>
+            
+        </div>
+        <br><br>
+        <div id="charts-container" class="charts-container">
+            <div class="chart-card">
+                <h3> XP Over Time</h3>
+                <canvas id="newChart" width="400" height="400"></canvas>
+
+            </div>
+        </div>
+         <div id="xp-chart"></div>
+
+    </div>
+
+    <div id="login-box" class="container1">
+        <h2>GraphQL Education Tracker </h2>
+        <p>Welcome to the GraphQL Education Tracker! Enter your information to see your progress and achievements in programming.</p>
+        <br>
+        <div class="signin-container">
+            <label class="register-label">Username</label>
+            <input type="text" class="signin-input" id="username" placeholder="Enter Username ||  Email">
+        </div>
+        <div class="signin-container">
+            <label class="register-label">Password</label>
+            <input type="password" id="password" class="signin-input" placeholder="Enter your password">
+        </div>
+        <br>
+        <button class="bubbly-buttonn" onclick="login()">Sign In</button>
+        <p id="error-msg" style="color: red;"></p>
+    </div>
+    
+    <script src="index.js"></script>
+</body>
+</html>
+
+
