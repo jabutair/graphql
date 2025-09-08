@@ -1,70 +1,85 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>GraphQL Education Tracker</title>
-    <link rel="stylesheet" href="s.css">
-    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/chartjs-adapter-date-fns"></script>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>GraphQL Education Tracker</title>
+
+  <link rel="stylesheet" href="css/style.css"/>
+
+  <!-- Libs -->
+  <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/chartjs-adapter-date-fns"></script>
 </head>
-
 <body>
-    <div id="profile-box" class="container hidden">
-        
-        <button class="bubbly-button" onclick="logout()">Log Out</button>
+  <!-- Login -->
+  <section id="login-box" class="login-screen">
+    <div class="login-card">
+      <h2>GraphQL Education Tracker</h2>
+      <p>Welcome! Enter your credentials to see your progress and achievements.</p>
 
-        <h2 id="welcome-msg"></h2>
-        <div id="info-container" class="charts-container">
-            <div id="user-info" class="card"></div> 
+      <form id="login-form" novalidate>
+        <div class="field">
+          <label for="username">Username or Email</label>
+          <input id="username" type="text" autocomplete="username" placeholder="Enter username or email"/>
         </div>
-        <br>
-        <div id="charts-container" class="charts-container">
-            <div class="chart-card">
-                <h3>XP Progress</h3>
-                <canvas id="xpBarChart"></canvas>
-            </div>
+        <div class="field">
+          <label for="password">Password</label>
+          <input id="password" type="password" autocomplete="current-password" placeholder="Enter your password"/>
         </div>
-        <br><br>
-        <div id="charts-container" class="charts-container">
-            <div class="chart-card">
-                <h3>Skills Progress</h3>
-                <canvas id="skillPieChart"></canvas>
-            </div>
-            
-        </div>
-        <br><br>
-        <div id="charts-container" class="charts-container">
-            <div class="chart-card">
-                <h3> XP Over Time</h3>
-                <canvas id="newChart" width="400" height="400"></canvas>
-
-            </div>
-        </div>
-         <div id="xp-chart"></div>
-
+        <button id="login-btn" class="login-btn" type="submit">Sign In</button>
+        <p id="error-msg"></p>
+      </form>
     </div>
+  </section>
 
-    <div id="login-box" class="container1">
-        <h2>GraphQL Education Tracker </h2>
-        <p>Welcome to the GraphQL Education Tracker! Enter your information to see your progress and achievements in programming.</p>
-        <br>
-        <div class="signin-container">
-            <label class="register-label">Username</label>
-            <input type="text" class="signin-input" id="username" placeholder="Enter Username ||  Email">
-        </div>
-        <div class="signin-container">
-            <label class="register-label">Password</label>
-            <input type="password" id="password" class="signin-input" placeholder="Enter your password">
-        </div>
-        <br>
-        <button class="bubbly-buttonn" onclick="login()">Sign In</button>
-        <p id="error-msg" style="color: red;"></p>
-    </div>
-    
-    <script src="index.js"></script>
+  <!-- App -->
+  <div id="profile-box" class="hidden">
+    <header class="app-header">
+      <h2 id="welcome-msg">Welcome</h2>
+      <div class="header-actions">
+        <button id="theme-btn" class="theme-btn" type="button" aria-label="Toggle theme">🌙</button>
+        <button id="export-btn" class="export-btn" type="button">Export Charts</button>
+        <button class="logout-btn" type="button" onclick="logout()">Log Out</button>
+      </div>
+    </header>
+
+    <div class="name-sep"></div>
+
+    <!-- Info (stacked + centered separators) -->
+    <section id="user-info">
+      <div class="info-grid">
+        <p><strong>ID</strong><br><span id="f-id">—</span></p>
+        <p><strong>Name</strong><br><span id="f-name">—</span></p>
+        <p><strong>Audit Ratio</strong><br><span id="f-audit">—</span></p>
+        <p><strong>Total XP from Piscine-Go</strong><br><span id="f-go">—</span></p>
+        <p><strong>Total XP from Piscine-JS</strong><br><span id="f-js">—</span></p>
+        <p><strong>Total XP from module</strong><br><span id="f-module">—</span></p>
+        <p><strong>Highest Checkpoint Level</strong><br><span id="f-check">—</span></p>
+        <p><strong>Groups</strong><br><span id="f-groups">—</span></p>
+      </div>
+    </section>
+
+    <!-- Charts -->
+    <section class="charts-grid" aria-label="Statistics">
+      <article class="chart-card">
+        <h3>XP Progress</h3>
+        <canvas id="xpBarChart"></canvas>
+      </article>
+
+      <article class="chart-card">
+        <h3>Skills Progress</h3>
+        <canvas id="skillPieChart"></canvas>
+      </article>
+
+      <article class="chart-card chart-xl">
+        <h3>XP Over Time</h3>
+        <canvas id="newChart"></canvas>
+      </article>
+    </section>
+  </div>
+
+  <script src="js/script.js"></script>
 </body>
 </html>
-
-
