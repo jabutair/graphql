@@ -22,13 +22,9 @@ Includes **JWT login**, **dark/light theme**, and **chart export**.
 |---|---|
 | ![Login](assets/login.png) | ![Dashboard Info](assets/dashboard-info.png) |
 
-| Charts (Top: Bar + Pie) | XP Over Time (Bottom) |
+| Charts |
 |---|---|
 | ![Charts Top](assets/charts-top.png) | ![XP Over Time](assets/chart-line.png) |
-
-| Dark Mode | Export Charts |
-|---|---|
-| ![Dark Mode](assets/dark-mode.png) | ![Export Result](assets/export.png) |
 
 ---
 
