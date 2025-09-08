@@ -1,0 +1,154 @@
+:root{
+  --pink:#ff69b4; --ink:#1b1b1b; --bg:#f4f6f6; --card:#fff; --muted:#6b7280;
+  --radius:16px; --shadow:0 10px 30px rgba(0,0,0,.08);
+
+  /* chart heights */
+  --h-top:320px;      /* top charts */
+  --h-bottom:360px;   /* bottom wide chart */
+}
+
+*{box-sizing:border-box;margin:0;padding:0}
+html,body{height:100%}
+body{font:16px/1.6 'Georgia','Times',serif;background:var(--bg);color:var(--ink)}
+.hidden{display:none !important}
+
+/* ===== Login ===== */
+.login-screen{min-height:100vh;display:grid;place-items:center;padding:24px}
+
+.login-card{
+  width: min(900px, 92vw);        /* larger card */
+  padding: 40px 44px;
+  background: var(--card); border-radius: var(--radius); border:1px solid #f0e6ee;
+  box-shadow: 0 12px 28px rgba(231,75,153,.18), 0 2px 0 rgba(255,105,180,.25) inset;
+  text-align:center;
+}
+.login-card h2{font-size:44px;margin-bottom:10px;text-shadow:3px 3px 0 rgba(255,105,180,.35)}
+.login-card p{color:var(--muted);margin-bottom:22px;font-size:16px}
+
+.field{margin-bottom:18px;text-align:left}
+.field label{display:block;font-weight:700;margin-bottom:8px;color:var(--pink);font-size:18px}
+.field input{
+  width:100%; height:52px;
+  padding:12px 14px;
+  border:1px solid var(--pink);
+  border-radius:12px;
+  background:#f8f2fa;
+  font-size:18px; outline:none;
+}
+
+/* neutral placeholder (clean, accessible) */
+.field input::placeholder{color:#9aa0a6}
+
+.login-btn{
+  font-family: inherit;        
+  font-weight:700;
+  font-size:20px;
+  line-height:1;
+  background:var(--pink); color:#fff; border:none;
+  padding:16px 28px; min-width:210px; border-radius:12px;
+  cursor:pointer; transition:.2s;
+  display:block; margin:28px auto 0; 
+}
+.login-btn:hover{filter:brightness(.95)}
+#error-msg{color:#c62828;font-size:15px;min-height:18px;margin-top:10px}
+
+
+/* ===== App header ===== */
+.app-header{max-width:1300px;margin:20px auto 8px;padding:0 16px;display:flex;align-items:center;justify-content:space-between;gap:12px}
+.app-header h2{font-size:30px;color:#222;text-shadow:2px 2px 0 rgba(255,105,180,.25)}
+.header-actions{display:flex;gap:10px;align-items:center}
+.theme-btn{
+  background:#ffd1e8;color:#333;border:1px solid #ffc3df;border-radius:10px;padding:10px 12px;cursor:pointer
+}
+.export-btn{
+  background:#ffd1e8;color:#333;border:1px solid #ffc3df;border-radius:10px;padding:10px 14px;cursor:pointer
+}
+.logout-btn{
+  background:#ff69b4;color:#fff;border:none;border-radius:10px;padding:12px 20px;cursor:pointer;font-size:16px
+}
+.logout-btn:hover{filter:brightness(.95)}
+.name-sep{height:12px}
+
+
+/* ===== Profile info ===== */
+#profile-box{max-width:1300px;margin:0 auto;padding:0 16px 28px}
+#user-info{
+  background:var(--card); border-radius:14px; border:1px solid #f0e6ee; box-shadow:var(--shadow);
+  padding:24px; margin-bottom:24px; text-align:center; font-size:18px;
+}
+#user-info .info-grid{display:flex; flex-direction:column; align-items:center}
+#user-info p{
+  width:min(700px, 75%);     
+  margin:12px auto; padding:10px 0;
+  border-bottom:1px solid rgba(255,105,180,.45);
+}
+#user-info p:last-child{border-bottom:0}
+#user-info strong{color:var(--pink)}
+
+
+/* ===== Charts (fixed heights) ===== */
+.charts-grid{
+  display:grid; grid-template-columns:1fr 1fr; gap:20px; justify-items:center;
+}
+.chart-card{
+  background:var(--card); border-radius:14px; border:1px solid #f0e6ee; box-shadow:var(--shadow);
+  padding:16px; width:100%;
+}
+.chart-card h3{margin:0 0 10px; font-size:18px; text-align:center; color:#222}
+.chart-card:not(.chart-xl) canvas{width:100% !important; height:var(--h-top) !important; display:block}
+.chart-card.chart-xl{grid-column:1 / -1}
+.chart-card.chart-xl canvas{width:100% !important; height:var(--h-bottom) !important; display:block}
+
+@media (max-width: 720px){
+  .charts-grid{grid-template-columns:1fr}
+  .chart-card.chart-xl{grid-column:auto}
+}
+
+
+/* ===== Dark Mode ===== */
+body.dark{background:#0f0f12;color:#e5e7eb}
+body.dark .login-card,
+body.dark #user-info,
+body.dark .chart-card{background:#16171b;border-color:#2a2b31;box-shadow:0 6px 18px rgba(0,0,0,.5)}
+body.dark .app-header h2{color:#f2f2f2;text-shadow:none}
+body.dark .theme-btn, body.dark .export-btn{background:#2a2b31;color:#ffd1e8;border-color:#3a3b42}
+body.dark .logout-btn{background:#c62828}
+body.dark .field input{background:#202127;color:#e5e7eb;border-color:#ff69b4}
+
+
+/* ===== Welcome header ===== */
+.app-header{
+  max-width: 1200px;
+  margin: 24px auto 8px;
+  padding: 0 16px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  justify-content: flex-start;      
+}
+
+.app-header h2{
+  margin: 0;
+  margin-right: auto;              
+  text-align: left;                
+  font-size: 38px;
+  line-height: 1.25;
+  letter-spacing: .3px;
+  text-shadow: 2px 2px 0 rgba(255,105,180,.25);
+}
+
+.header-actions{
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+}
+
+.name-sep{ display: none; }
+
+@media (max-width: 720px){
+  .app-header{ flex-direction: column; align-items: stretch; gap: 10px; }
+  .app-header h2{ text-align: left; margin-right: 0; }
+  .header-actions{ justify-content: center; }
+}
