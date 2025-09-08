@@ -1,4 +1,4 @@
-# GraphQL Education Tracker
+# GraphQL Education Tracker ✨
 
 A front-end app that displays student data (XP, Skills, Progress) from the university GraphQL API.  
 Includes **JWT login**, **dark/light theme**, and **chart export**.
@@ -13,7 +13,7 @@ Includes **JWT login**, **dark/light theme**, and **chart export**.
   
 ---
 
-## Screenshots
+## 📸 Screenshots
 
 | Login | Dashboard (Info) |
 |---|---|
@@ -26,12 +26,12 @@ Includes **JWT login**, **dark/light theme**, and **chart export**.
 
 ---
 
-## Features
-- **JWT Login**: Basic auth → JWT (Bearer) for GraphQL requests.
-- **Profile Info**: ID, Name, Audit Ratio, Groups, and XP totals (Go/JS/Module).
-- **Charts**: Bar (XP by project), Pie (skills), Line (XP over time) — **export to PNG**.
-- **UI/UX**: Clean, responsive layout; **dark/light** mode persisted in `localStorage`.
-- **No HTML injection**: JS only binds data to existing nodes and renders charts.
+## ✨ Features
+- 🔐 **JWT login** (Basic → Bearer)
+- 🧾 **Profile info**: ID, Name, Audit Ratio, Groups, XP totals (Go/JS/Module)
+- 📊 **Charts**: Bar, Pie, Line — **export to PNG**
+- 🌓 **Dark/Light theme** (saved in `localStorage`)
+- 📱 **Responsive** UI
 
 ---
 
@@ -46,7 +46,7 @@ Includes **JWT login**, **dark/light theme**, and **chart export**.
 
 ---
 
-## Getting Started
+## 🚀 Getting Started
 
 Some browsers block network requests from `file://`. Use a simple local server:
 
