@@ -10,13 +10,10 @@ Includes **JWT login**, **dark/light theme**, and **chart export**.
 - [Features](#features)
 - [Architecture](#architecture)
 - [Getting Started](#getting-started)
-- [Configuration](#configuration)
   
 ---
 
 ## Screenshots
-
-> Place images in `/assets`. Filenames below must match.
 
 | Login | Dashboard (Info) |
 |---|---|
@@ -24,7 +21,7 @@ Includes **JWT login**, **dark/light theme**, and **chart export**.
 
 | Charts |
 |---|---|
-| ![Charts Top](assets/charts-top.png) | ![XP Over Time](assets/chart-line.png) |
+| ![Charts Top](assets/charts-top.png) |
 
 ---
 
