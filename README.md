@@ -20,8 +20,9 @@ Includes **JWT login**, **dark/light theme**, and **chart export**.
 | ![Login](assets/login.png) | ![Dashboard Info](assets/dashboard-info.png) |
 
 | Charts |
-|---|---|
+|---|
 | ![Charts Top](assets/charts-top.png) |
+
 
 ---
 
