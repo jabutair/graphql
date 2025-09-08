@@ -1,9 +1,5 @@
 # GraphQL Education Tracker
 
-[![Static](https://img.shields.io/badge/Static-HTML%2FCSS%2FJS-ff69b4)]()
-[![Charts](https://img.shields.io/badge/Charts-Chart.js-ff69b4)]()
-[![HTTP](https://img.shields.io/badge/HTTP-Axios-ff69b4)]()
-
 A front-end app that displays student data (XP, Skills, Progress) from the university GraphQL API.  
 Includes **JWT login**, **dark/light theme**, and **chart export**.
 
@@ -15,12 +11,7 @@ Includes **JWT login**, **dark/light theme**, and **chart export**.
 - [Architecture](#architecture)
 - [Getting Started](#getting-started)
 - [Configuration](#configuration)
-- [Deployment](#deployment)
-- [Privacy & Security](#privacy--security)
-- [Troubleshooting](#troubleshooting)
-- [Project Structure](#project-structure)
-- [License](#license)
-
+  
 ---
 
 ## Screenshots
